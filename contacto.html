@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de inscripcion</title>
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+    <div class="container">
+        <!--Cabecera-->
+        <header>
+            <h1>Contacto</h1>
+        </header>
+
+        <nav id="navbar"></nav>
+
+        <!--Seccion del formulario-->
+        <main>
+            <form action="" id="registro">
+                
+                <!--Caja del nombre-->
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" required>
+                </div>
+    
+                <!--Caja del apellido-->
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" required>
+                </div>
+    
+                <!--Caja de descripcion-->
+                <div class="form-group">
+                    <label for="descripcion">Descripcion</label>
+                    <textarea name="descripcion" id="descripcion"></textarea>
+                </div>
+    
+                <!--Boton para enviar los datos-->
+                <button type="submit" onclick="enviarFormulario()">Enviar</button>
+            </form>
+        </main>
+        
+
+        <!--Boton para volver al inicio-->
+        <nav>
+            <a href="index.html">Volver al inicio</a>
+        </nav>
+
+        <!--Pie de pagina-->
+        <footer>
+            <p>&copy; Todos los derechos reservados</p>
+        </footer>
+        
+    </div>
+
+    <!--Seccion para el script-->
+    <script>
+        function enviarFormulario() {
+            event.preventDefault();
+
+        var nombre = document.getElementById('nombre').value;
+        var apellido = document.getElementById('apellido').value;
+
+        console.log("nombre; ",nombre);
+        console.log("Apellido: ",apellido);
+        }
+
+    </script>
+</body>
+</html>
